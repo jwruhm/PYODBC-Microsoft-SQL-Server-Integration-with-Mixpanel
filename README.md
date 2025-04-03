@@ -20,6 +20,7 @@ This Python script connects to a Microsoft SQL Server database using the `pyodbc
 - Python 3.7+
 - ODBC Driver 18 for SQL Server (or compatible)
 - Mixpanel project with a valid token
+- Distinct ID(s) (`$distinct_id`) of the user profiles being updated in Mixpanel
 
 ### Python Packages
 
@@ -44,9 +45,9 @@ PASSWORD = '<Pwd>'              # e.g., 'mypassword'
 MIXPANEL_PROJECT_TOKEN = '<Mixpanel Token>'
 ```
 
-Ensure the `Users` table includes the following columns (or update the script accordingly):
+Update the script to support the relevant fields in the `Users` table. The script includes support for the following fields as-is:
 
-- `distinct_id`
+- `distinct_id` (required)
 - `Customer_Tier`
 - `Customer_Lifetime_Value`
 - `Last_Purchase_Date`
@@ -92,6 +93,7 @@ Mixpanel Response: 200 {'status': 1, 'error': None}
 - Ensure your IP address is whitelisted on the SQL Server.
 - If you get ODBC errors, verify that **ODBC Driver 18** is installed and properly configured.
 - Check Mixpanel’s [API status codes](https://developer.mixpanel.com/docs/http#response-format) if the response is not `200`.
+- Check Mixpanel's API documentation for the [Update Multiple Profiles Method](https://developer.mixpanel.com/reference/profile-batch-update), which references the [Set Property Method](https://developer.mixpanel.com/reference/profile-set) as an update command in this example
 
 ---
 
