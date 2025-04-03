@@ -94,6 +94,7 @@ Mixpanel Response: 200 {'status': 1, 'error': None}
 - If you get ODBC errors, verify that **ODBC Driver 18** is installed and properly configured.
 - Check Mixpanel’s [API status codes](https://developer.mixpanel.com/docs/http#response-format) if the response is not `200`.
 - Check Mixpanel's API documentation for the [Update Multiple Profiles Method](https://developer.mixpanel.com/reference/profile-batch-update), which references the [Set Property Method](https://developer.mixpanel.com/reference/profile-set) as an update command in this example
+- Check Microsoft's [Python SQL Driver - pyodbc](https://learn.microsoft.com/en-us/sql/connect/python/pyodbc/python-sql-driver-pyodbc?view=sql-server-ver16) for troubleshooting authentication with the SQL Server
 
 ---
 
