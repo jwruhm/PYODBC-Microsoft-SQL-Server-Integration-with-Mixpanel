@@ -1,8 +1,8 @@
-# 📩 SQL to Mixpanel Profile Sync
+# SQL to Mixpanel Profile Sync
 
 This Python script connects to a Microsoft SQL Server database using the `pyodbc` driver, retrieves user data from a `Users` table, and pushes selected user profile properties to Mixpanel in batch format via the `/engage#profile-batch-update` endpoint.
 
-## 📦 Features
+## Features
 
 - Connects to SQL Server securely with SQL authentication
 - Fetches and logs data from the `Users` table
@@ -15,7 +15,7 @@ This Python script connects to a Microsoft SQL Server database using the `pyodbc
 
 ---
 
-## 💠 Requirements
+## Requirements
 
 - Python 3.7+
 - ODBC Driver 18 for SQL Server (or compatible)
@@ -32,7 +32,7 @@ pip install pyodbc requests
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Update the following values in the script before running:
 
@@ -54,7 +54,7 @@ Update the script to support the relevant fields in the `Users` table. The scrip
 
 ---
 
-## ▶️ Running the Script
+##  Running the Script
 
 ```bash
 python sync_sql_to_mixpanel.py
@@ -72,7 +72,7 @@ Mixpanel Response: 200 {'status': 1, 'error': None}
 
 ---
 
-## 📤 Example Mixpanel Payload
+## Example Mixpanel Payload
 
 ```json
 {
@@ -88,7 +88,7 @@ Mixpanel Response: 200 {'status': 1, 'error': None}
 
 ---
 
-## ❓Troubleshooting
+## Troubleshooting
 
 - Ensure your IP address is whitelisted on the SQL Server.
 - If you get ODBC errors, verify that **ODBC Driver 18** is installed and properly configured.
@@ -98,7 +98,7 @@ Mixpanel Response: 200 {'status': 1, 'error': None}
 
 ---
 
-## 📄 License
+## License
 
 MIT License. Feel free to use, modify, and share.
 
